@@ -148,7 +148,7 @@ def generate_dataset(series, xmin, alpha, epsilon = 0.01):
 
     """
     number_of_datasets = int(round(0.25/(epsilon**2)) +1)
-    print number_of_datasets
+    print (number_of_datasets)
     n = len(series)
     non_powerlaw_series = filter(lambda x: x<xmin, series)
     ntail = n - len(non_powerlaw_series)
