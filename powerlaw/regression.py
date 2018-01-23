@@ -28,9 +28,9 @@ def least_square_regression(x, y, xlabel = "x", ylabel = "y", prefix="", suffix=
     regr.fit(X, Y)
 
     label_string = "Best fit line, y = "+str(regr.coef_[0][0])+" * x + "+str(regr.intercept_[0])
-    print label_string
-    print "Residual sum of squares: %.2f" % np.mean((regr.predict(X) - Y) ** 2)
-    print "Variance score: %.2f" % regr.score(X, Y)
+    #print (label_string)
+    #print ("Residual sum of squares: %.2f" % np.mean((regr.predict(X) - Y) ** 2)
+    #print "Variance score: %.2f" % regr.score(X, Y)
 
     # Plot outputs
     original_data, = plt.plot(X, Y,'go', label="original data")
@@ -148,7 +148,7 @@ def generate_dataset(series, xmin, alpha, epsilon = 0.01):
 
     """
     number_of_datasets = int(round(0.25/(epsilon**2)) +1)
-    print (number_of_datasets)
+    #print (number_of_datasets)
     n = len(series)
     non_powerlaw_series = filter(lambda x: x<xmin, series)
     ntail = n - len(non_powerlaw_series)
@@ -216,7 +216,7 @@ if __name__ == "__main__":
     data = [i for i in powerlaw_series(n=n, xmin = 20, Alpha = 2.6)]
     # print data
     (xmin, alpha, ks_statistics) = estimate_parameters(series=data, min_size_series = 5)
-    print "xmin = "+str(xmin)
-    print "alpha = "+str(alpha)
+    #print "xmin = "+str(xmin)
+    #print "alpha = "+str(alpha)
 
-    print goodness_of_fit(series=data, xmin=xmin, alpha=alpha, ks_statistics=ks_statistics, epsilon = 0.01, min_size_series = 50)
+    #print goodness_of_fit(series=data, xmin=xmin, alpha=alpha, ks_statistics=ks_statistics, epsilon = 0.01, min_size_series = 50)
