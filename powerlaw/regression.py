@@ -106,7 +106,7 @@ def estimate_parameters(series, min_size_series = 50, discrete = False):
             x_prev = x
             xmin_candidates.append(x_prev)
 
-    ks_statistics_min = sys.maxsize;
+    ks_statistics_min = 100000
     xmin_result = 0
     Alpha_result = 2
     for xmin in xmin_candidates[:-1*(min_size_series-1)]: 
