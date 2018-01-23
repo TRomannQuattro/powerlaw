@@ -3,8 +3,8 @@ from sklearn import linear_model
 import matplotlib.pyplot as plt
 from scipy.special import zeta
 
-from distribution import frequency_distribution, powerlaw_series, random_series
-from utils import unique
+from .distribution import frequency_distribution, powerlaw_series, random_series
+from .utils import unique
 
 from math import pow, e, log, sqrt
 import sys
